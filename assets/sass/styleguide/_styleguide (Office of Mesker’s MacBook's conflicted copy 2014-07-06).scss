@@ -1,0 +1,70 @@
+/**
+ * @file
+ * Style rules for the look and feel of the styleguide.
+ */
+
+$styleguide-slug: 2em;
+
+.styleguide-header {
+  margin-top: $styleguide-slug;
+  margin-bottom: $styleguide-slug * 2;
+}
+.styleguide-header__image {
+  height: 36px;
+}
+.styleguide-breadcrumbs {
+  @extend %allcaps;  
+  @include adjust-font-size-to($crumb, 1);
+  font-weight: 700;
+}
+.styleguide-body {
+  h1,h2,h3,h4,h5,h6,p,ul,ol { max-width: 760px; }
+  margin-bottom: $styleguide-slug;  
+}
+.styleguide-footer {
+  background: $white;
+  @include adjust-font-size-to($crumb, 1);
+  margin-top: $styleguide-slug * 2;
+  margin-bottom: $styleguide-slug * 2;  
+}
+
+.styleguide-swatch {
+  padding: 1em;
+  &.reverse {
+    color: $white;
+  }
+  margin-bottom: $zen-gutter-width;
+}
+
+.white-box {
+  box-shadow: inset 0px 0px 1px #666;
+}
+
+.styleguide-example { 
+  background: $off-white;
+  padding: $styleguide-slug * 2 0;
+  margin-bottom: $styleguide-slug;
+}
+.styleguide-markup {
+  margin-bottom: $styleguide-slug;
+}
+.stout-80 { 
+  background: tint( $stout, 20% );
+  padding: 1em;
+}
+.stout-60 { 
+  background: $stout-60;
+  padding: 1em;
+}
+.stout-40 { 
+  background: tint( $stout, 60% );
+  padding: 1em;
+}
+.stout-20 { 
+  background: tint( $stout, 80% );
+  padding: 1em;
+}
+.stout-5 { 
+  background: tint( $stout, 95% );
+  padding: 1em;
+}

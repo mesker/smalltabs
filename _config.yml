@@ -1,0 +1,6 @@
+name: Small Tabs › Style Guide
+markdown: redcarpet
+highlighter: pygments
+permalink: none
+baseurl: /smalltabs
+url: http://localhost:4000

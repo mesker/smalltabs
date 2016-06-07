@@ -1,0 +1,38 @@
+---
+layout: templates
+title: "Find a Bar Page"
+description: Displays specials results per search query the order of most recently updated.
+categories: templates
+---
+
+{% include site-header.html %}
+
+<div class="container">
+  <div class="l-1up l-stripe">
+    {% include finder.html %}
+  </div> 
+</div>
+
+<div class="page">
+  <div class="container">
+    <div class="l-33-66--1">
+      <figure class="finder__map">
+        <img src="{{ site.baseurl }}/assets/img/map-fpo.png"/>
+      </figure>
+    </div>
+    <div class="l-33-66--2">
+      {% include rollup--a.html %}
+      {% include rollup--b.html %}
+      {% include rollup--c.html %}
+      {% include rollup--b.html %}
+      {% include rollup--a.html %}
+      {% include rollup--b.html %}
+      {% include rollup--c.html %}
+      {% include rollup--b.html %}
+      {% include rollup--a.html %}
+      {% include rollup--b.html %}
+      {% include rollup--c.html %}      
+    </div>              
+  </div>
+</div>
+{% include site-footer.html %}

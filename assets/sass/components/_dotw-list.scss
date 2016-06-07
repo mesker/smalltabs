@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Style rules for the dotw rollup.
+ */
+
+.dotw-title {
+  @extend %champion-heavyweight;
+  color: $pilsner;
+  @include adjust-font-size-to($text, 2);
+  @include leader(0, $text);
+  @include trailer(.5, $text);
+  padding-top: rhythm(1.5, $text);
+  padding-right: rhythm(1, $text);  
+  margin-bottom: rhythm(1.25, $text);
+  padding-left: rhythm(1.5, $text);
+}
+.dotw-list { @extend %rollup-list; }
+.dotw-list__drink { background: url('../img/icon__drink.svg'); }
+.dotw-list__food { background-image: url('../img/icon__food.svg'); }
+.dotw-list__drink,
+.dotw-list__food {
+  background-position: left rhythm(1.5, $label) top rhythm(1.5, $label);
+  background-repeat: no-repeat;
+  background-size: 1em;
+}

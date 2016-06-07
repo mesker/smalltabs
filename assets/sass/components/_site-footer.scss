@@ -1,0 +1,49 @@
+/**
+ * @file
+ * Style rules for the site footer.
+ */
+
+.site-footer {
+  @include zen-clear();
+  @include adjust-font-size-to($crumb, 1.25);   
+  text-align: left;
+  color: $stout-40;
+  background: $stout;
+  padding: 4em 0 3em;
+}
+.site-footer__logo {
+  float: left;
+  margin-right: $zen-gutter-width / 2;
+  margin-bottom: rhythm(2);
+}
+.site-footer__copyright {
+  float: left;
+  p {
+    margin-bottom: rhythm(0);
+  }
+}
+.site-footer__social-links {
+  @include zen-clear();
+  font-size: 30px;
+  line-height: 1;
+  height: 40px;
+
+  @include breakpoint($bp1) {
+    @include zen-clear(none);  
+    float: right;
+    font-size: 30px;
+    line-height: .25;
+  }
+}
+.site-footer__social-links a {  
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding-right: rhythm(.5, $text);
+  @include breakpoint($bp1) {
+    padding-left: rhythm(.5, $text);
+    padding-right: rhythm(0, $text);
+  }
+}

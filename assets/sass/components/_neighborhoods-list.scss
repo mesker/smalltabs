@@ -1,0 +1,50 @@
+/**
+ * @file
+ * Style rules for the neighborhoods list.
+ */
+
+.neighborhoods-list {
+  list-style-type: none;
+  padding-left: 0;  
+  -moz-column-count: 2;
+  -moz-column-gap: $zen-gutter-width;
+  -webkit-column-count: 2;
+  -webkit-column-gap: $zen-gutter-width;
+  @include breakpoint($bp1) {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+  }
+  @include breakpoint($bp2) {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+  }
+}
+.neighborhoods-list__heading {
+  @extend %champion-heavyweight;
+  @extend %allcaps; 
+  color: $pilsner;
+  @include adjust-font-size-to($sm-heading, 2.5);   
+  @include trailer(1.25, $sm-heading);
+  padding-bottom: rhythm(1.25, $sm-heading);
+  border-bottom: 1px solid $stout-10; 
+  @include breakpoint($bp1) {
+    @include adjust-font-size-to($lg-heading, 2.5);   
+    @include trailer(1.25, $lg-heading);
+    padding-bottom: rhythm(1.25, $lg-heading);
+  }
+}
+.neighborhoods-list__subheading {
+  @extend %track-in;
+  @include adjust-font-size-to($lg-heading, 2.5);  
+  @include leader(0, $lg-heading);
+  @include trailer(2, $lg-heading);
+  color: $stout;
+}
+.neighborhoods-list__item {
+  @extend %helvetica;
+  &:after {
+    content: '›';
+    margin-left: rhythm(.25, $text);
+    color: $pilsner;
+  }
+}

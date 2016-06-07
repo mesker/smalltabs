@@ -1,0 +1,87 @@
+/**
+ * @file
+ * Style rules for the site header.
+ */
+
+.site-header { 
+  display: block;
+  background: $stout;
+  padding: rhythm(2) 0;  
+}
+
+.site-logo {
+  float: left;
+  vertical-align: middle;
+  line-height: 0;
+  height: 40px;
+}
+
+.site-navigation {
+  @extend %champion-heavyweight;
+  float: right;
+  height: 40px;
+  @include adjust-font-size-to($crumb, 0);
+  display: none;
+  @include breakpoint($bp2){ display: block; }
+
+}
+.site-navigation a:link,
+.site-navigation a:visited { 
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-left: rhythm(1.5, $crumb);
+  border-bottom: 0;
+}
+.site-navigation a:hover,
+.site-navigation a:active {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  text-decoration: none;  
+}
+.site-navigation__link {
+  text-transform: uppercase;
+  letter-spacing: .125em;
+  &:link,
+  &:visited {
+    color: $white-30;
+  }  
+  &:hover,
+  &:active { 
+    color: $link-color;
+  }  
+}
+.site-navigation__button {
+  background: rgba($stout-80, .5);
+  padding: 1em 1.5em;
+  border-radius: $radius;
+
+  &:link,
+  &:visited {
+    color: $white-60;
+  }
+  &:hover,
+  &:active {
+    background: $link-color;
+  }
+}
+.site-navigation--mobile {
+  font-size: 30px;
+  line-height: .25;
+  float: right;
+  height: 40px;
+  @include breakpoint($bp2){ display: none; }
+
+  a {
+    color: $link-color;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+}

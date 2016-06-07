@@ -1,0 +1,32 @@
+---
+layout: templates
+title: "Bar Page"
+description: Displays location, special and contact information content for a single bar.
+categories: templates
+---
+{% include site-header.html %}
+
+<header class="container">
+  <div class="l-1up l-stripe">
+    <h1 class="bar__title">Quenchers Saloon</h1>
+    <p class="bar__address">2401 N Western Ave, <a href="#">Logan Square</a></p>
+  </div>
+</header>
+
+<div class="page">
+
+  <div class="container">
+    <div class="l-66-33--1">
+      {% include dotw-list.html %}
+    </div>  
+
+    <div class="l-66-33--2">
+      <figure class="finder__map">
+        <img src="{{ site.baseurl }}/assets/img/map-fpo.png"/>
+      </figure>  
+      {% include contact-list.html %}
+      {% include added-list.html %}  
+    </div>      
+  </div>
+</div>
+{% include site-footer.html %}
